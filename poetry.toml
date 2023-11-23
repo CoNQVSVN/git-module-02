@@ -1,0 +1,24 @@
+# This is the local configuration of Poetry application
+
+cache-dir = ".cache"
+
+[virtualenvs]
+    create = true
+    in-project = true
+    prefer-active-python = false
+    path = "{project-dir}/.venv"
+    prompt = "{project_name}-py{python_version}"
+
+[virtualenvs.options]
+    always-copy = false
+    no-pip = false
+    no-setuptools = false
+    system-site-packages = false
+
+[experimental]
+    system-git-client = false
+
+[installer]
+    max-workers = 7
+    no-binary = [":none:"]
+    parallel = true
